@@ -12,6 +12,17 @@ class Tarea extends Model
 
     public function trabajadores() {
         //Una tarea -> un trabajador
+
+        /*
+        Trabajador  1  :  N  Tarea
+        hasMany               belongsTo
+
+                    1  :  1
+        hasOne/Many           belongsTo
+        */
+
+        
+
         return $this->belongsTo(Trabajador::class);
     }
 

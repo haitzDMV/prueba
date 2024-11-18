@@ -7,9 +7,13 @@
 </head>
 <body>
     <h1>Lista trabajadores</h1>
+    <h3>Trabajador: {{ $trabajador->nombre }}  {{ $trabajador->apellidos }} {{ $trabajador->dni }}</h3>
+
+    <h3>Tareas:</h3>
     <ul>
-        @foreach ($trabajadores as $trabajador)
-        <a href="/trabajadores/show/{{$trabajador->id}}"><li>{{ $trabajador->nombre }}  {{ $trabajador->apellidos }} {{ $trabajador->dni }}</li></a>
+        
+        @foreach ($tareas as $tarea)
+        <li>{{ $tarea->titulo }}</li>
         @endforeach
     </ul>
     <a href="/trabajadores/create">Añadir trabajadores</a>

@@ -9,7 +9,7 @@
     <h1>Editar tarea</h1>
     <form action="/tareas/update/{{$tarea->id}}" method="post">
         @csrf
-        @method('post')
+        @method('put')
         <input type="text" name="titulo" value="{{$tarea->titulo}}">
         <input type="text" name="descripcion" value="{{$tarea->descripcion}}">
         <select name="trabajador_id">

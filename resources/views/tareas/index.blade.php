@@ -8,9 +8,16 @@
     <h1>Lista tareas</h1>
     <ul>
         @foreach ($tareas as $tarea)
-            <li>
-                <a href="/tareas/edit/{{$tarea->id}}">{{ $tarea->titulo }}</a> <a href="/tareas/delete/{{$tarea->id}}">Borrar</a> 
-            </li>
+            
+            <form action="/tareas/delete/{{$tarea->id}}" method="post">
+                @csrf
+                @method('delete')
+                <li>
+                    <a href="/tareas/edit/{{$tarea->id}}">{{ $tarea->titulo }}</a>
+                </li>
+                <input type="submit" value="Borrar">
+            </form>
+            
 
         @endforeach
     </ul>

@@ -52,7 +52,16 @@ class TareaController extends Controller
         $tarea->fecha_limite = $request->fecha_limite;
         $tarea->save();
 
-        return redirect('tareas.index');
+        return redirect('/tareas/index');
+    }
+
+    public function delete($id) {
+        $tarea = Tarea::find($id);
+        $tarea->delete();
+
+        return redirect('/tareas/index');
+
+
     }
 
 
