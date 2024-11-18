@@ -35,6 +35,8 @@ class TrabajadorController extends Controller
     }
 
     public function show($id) {
+        //$tarea = Tarea::find(1);
+        //$trabajador = $tarea->trabajador;
         $tareas = Tarea::where('trabajador_id', '=', $id)->get();
         $trabajador = Trabajador::find($id);
         return view('/trabajadores/show', compact('trabajador', 'tareas'));
