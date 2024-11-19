@@ -21,7 +21,8 @@ class Tarea extends Model
         hasOne/Many           belongsTo
         */
 
-        //sail artisan make:model Nombre --controller --migration
+        //sail artisan make:model Trabajadores --controller --migration
+        //sail artisan make:view trabajadores.vista
         //sai artisan migrate
         //git remote add origin hhtps://repositorio.git
         //git branch -M main
