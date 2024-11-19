@@ -21,6 +21,12 @@ class Tarea extends Model
         hasOne/Many           belongsTo
         */
 
+        //sail artisan make:model Nombre --controller --migration
+        //sai artisan migrate
+        //git remote add origin hhtps://repositorio.git
+        //git branch -M main
+        //git push -u origin main
+        //git init
         
 
         return $this->belongsTo(Trabajador::class);
