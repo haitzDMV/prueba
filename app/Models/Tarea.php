@@ -27,6 +27,7 @@ class Tarea extends Model
         //git branch -M main
         //git push -u origin main
         //git init
+        //curl -s https://laravel.build/nombre-proyecto | bash
         
 
         return $this->belongsTo(Trabajador::class);
